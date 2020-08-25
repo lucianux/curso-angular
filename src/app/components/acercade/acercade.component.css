@@ -1,0 +1,14 @@
+.images {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.images li {
+    display: inline-block;
+    width: 30%;
+    margin: 20px 5%;
+}
+
+.images li img {
+    max-width: 100%;
+}

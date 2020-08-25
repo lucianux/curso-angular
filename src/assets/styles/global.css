@@ -1,0 +1,150 @@
+/**** General ****/
+
+body, ul, li, a, h1, h2, p {
+    margin: 0;
+    padding: 0;
+	background: #209CEE;
+    /* color: #ffffff; */
+    color: #000000;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+/**** Header ****/
+
+header a {
+    background: hsl(327, 38%, 82%, 100%);
+    text-decoration: none;
+}
+
+header h2 {
+    background: hsl(327, 38%, 82%, 100%);
+    text-align: center;
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+/**** Banner ****/
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width : 100%;
+}
+
+.welcome h3 {
+    margin: 0;
+}
+
+.banner .welcome {
+    padding: 2%;
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    color: black;
+    background-color: hsl(327, 38%, 82%, 100%);
+    border-radius: 0 35px 0 0;
+}
+
+/**** Main ****/
+
+.main-title {
+    margin: 20px 0;
+}
+
+main {
+    max-width: 100%;
+    width: 1000px;
+    margin: 50px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+article p {
+    line-height: 1.5em;
+}
+
+/**** Barra de navegación ****/
+
+.main-nav ul, .main-nav li, .main-nav a {
+    background: #2C514C;
+    text-align: center;
+}
+
+nav {
+    background: #2C514C;
+    position: sticky;
+    padding: 20px;
+    top: 28px;
+}
+
+nav li {
+    display: inline-block;
+    width: 25%;
+    font-size: 1em;
+}
+
+nav ul {
+    white-space: nowrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+.icono {
+    margin-right: 10px;
+}
+
+/**** Footer ****/
+
+p.copyright, footer {
+    background: #122932;
+    color: white;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+/***  Formularios  ***/
+
+label, input, button, textarea, select {
+    width: 100%;
+}
+
+.column-A, .column-B {
+    float: left;
+}
+
+.column-A {
+    width: 30%;
+}
+
+.column-B {
+    width: 70%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    margin: 10px;
+}
+
+textarea {
+    height: 50px;
+}

@@ -1,0 +1,27 @@
+<header>
+  <h2><a [routerLink]="['/']">Repartos.com.ar</a></h2>
+</header>
+
+<section class="banner">
+  <a [routerLink]="['/']">
+    <img src="./assets/images/delivery-food-box.jpg" alt="Banner - imagen de entrega de un paquete">
+    <div class="welcome">
+      <h3>Guía de Deliverys de <br><span>La Plata</span></h3>
+    </div>
+  </a>
+</section>
+
+<nav class="main-nav">
+  <ul>
+      <li><a [routerLink]="['/agregar']"><span class="icono"><i class="fas fa-plus"></i></span>Agregar</a></li>
+      <li><a [routerLink]="['/registro']"><span class="icono"><i class="fas fa-user-plus"></i></span>Registrate</a></li>
+      <li><a [routerLink]="['/contacto']"><span class="icono"><i class="fas fa-envelope-square"></i></span>Contacto</a></li>
+      <li><a [routerLink]="['/acercade']"><span class="icono"><i class="fas fa-book"></i></span>Acerca de</a></li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <p class="copyright">Chusoft&copy;</p>
+</footer>

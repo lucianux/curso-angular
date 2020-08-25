@@ -1,0 +1,51 @@
+<main>
+    <h2 class="main-title">Agregando comercio</h2>
+    <p>Para registrar un comercio debe completar el siguiente formulario y creará una publicación en la lista de
+        comercios.</p>
+    <form action="">
+        <div class="row">
+            <div class="column-A">
+                <label for="nameCommerce">Nombre</label>
+            </div>
+            <div class="column-B">
+                <input id="nameCommerce" name="nameCommerce" type="text" [(ngModel)]="comercioFormulario.title">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column-A">
+                <label for="address">Dirección</label>
+            </div>
+            <div class="column-B">
+                <input id="address" name="address" type="text" [(ngModel)]="comercioFormulario.address">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column-A">
+                <label for="phone">Teléfono</label>
+            </div>
+            <div class="column-B">
+                <input id="phone" name="phone" type="text" [(ngModel)]="comercioFormulario.phone">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column-A">
+                <label for="category">Categoría</label>
+            </div>
+            <div class="column-B">
+                <select name="category" id="category" [(ngModel)]="comercioFormulario.type">
+                    <option value="pizzas">Pizzas y Empanadas</option>
+                    <option value="heladerias">Heladerías</option>
+                    <option value="pollos">Pollos</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <!-- <input type="submit"> -->
+            <button type="button" (click)="publicarComercio()">Publicar</button>
+        </div>
+    </form>
+</main>
