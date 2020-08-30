@@ -36,15 +36,15 @@ export class ComerciosComponent implements OnInit {
         //     }
         // );
 
-        var comercios: Comercio[] = new Array<Comercio>();
         this._comercioService.obtenerComercios().subscribe(
-            data => {
-                comercios = data;
-            }
+            (data: Array<Comercio>) => {
+                this.comerciosDePollos = data.filter(i => i.tipo === 'pollos');
+                this.comerciosDePizzas = data.filter(i => i.tipo === 'pizzas');
+                this.comerciosDeHeladerias = data.filter(i => i.tipo === 'heladerias');
+                //console.log(this.data);
+            },
+            err => console.log(err)
         );
-        this.comerciosDePollos = comercios.filter(i => i.tipo === 'pollos');
-        this.comerciosDePizzas = comercios.filter(i => i.tipo === 'pizzas');
-        this.comerciosDeHeladerias = comercios.filter(i => i.tipo === 'heladerias');
     }
 
     ngOnInit() {
