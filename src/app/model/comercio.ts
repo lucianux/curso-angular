@@ -1,10 +1,10 @@
 export class Comercio {
 
-    id: number;
-    title: string;
-    address: string;
-    phone: string;
-    type: string;
+    uid: number;
+    nombre: string;
+    direccion: string;
+    telefono: string;
+    tipo: string;
 
     constructor(
 

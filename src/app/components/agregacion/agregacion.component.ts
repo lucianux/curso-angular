@@ -19,7 +19,7 @@ export class AgregacionComponent {
     }
 
     publicarComercio () {
-        console.log("Send " + this.comercioFormulario.type);
+        console.log("Send " + this.comercioFormulario.tipo);
         var response: string = "";
         this._comercioService.publicarComercio(this.comercioFormulario).subscribe(
             data => {
