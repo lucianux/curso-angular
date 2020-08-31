@@ -9,6 +9,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AcercadeComponent } from './components/acercade/acercade.component';
 import { ComerciosComponent } from './components/comercios/comercios.component';
@@ -22,7 +24,9 @@ import { RegistroComponent } from './components/registro/registro.component';
     ComerciosComponent,
     RegistroComponent,
     ContactoComponent,
-    AcercadeComponent
+    AcercadeComponent,
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

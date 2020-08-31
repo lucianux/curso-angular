@@ -1,0 +1,10 @@
+<nav class="main-nav">
+    <ul>
+        <li *ngIf="isLogged"><a>Salir</a></li>
+        <li *ngIf="isLogged"><a [routerLink]="['/agregar']">Agregar</a></li>
+        <li *ngIf="!isLogged"><a [routerLink]="['/entrar']">Entrar</a></li>
+        <li *ngIf="!isLogged"><a [routerLink]="['/registro']">Registrate</a></li>
+        <li><a [routerLink]="['/contacto']">Contacto</a></li>
+        <li><a [routerLink]="['/acercade']">Acerca de</a></li>
+    </ul>
+  </nav>
