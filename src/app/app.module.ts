@@ -16,6 +16,7 @@ import { AcercadeComponent } from './components/acercade/acercade.component';
 import { ComerciosComponent } from './components/comercios/comercios.component';
 import { AgregacionComponent } from './components/agregacion/agregacion.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RegistroComponent } from './components/registro/registro.component';
     ContactoComponent,
     AcercadeComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,

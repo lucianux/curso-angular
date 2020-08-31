@@ -8,11 +8,18 @@ import { AuthService } from '../../services/auth.service';
 })
 
 export class LoginComponent implements OnInit {
+    usuario: any = {
+        email: '',
+        password: ''
+    }
+
     constructor(public _authS: AuthService) {}
 
     ngOnInit() {}
 
     public ingresar() { this._authS.login(); }
-    
-    public salir() { }
+
+    public ingresarConEmail() { this._authS.ingresarConEmail(this.usuario.email, this.usuario.password); }
+
+    public salir() { this._authS.logout(); }
 }

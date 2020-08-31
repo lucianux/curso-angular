@@ -2,7 +2,7 @@
     <article>
         <h2 class="main-title">Pizzas Y Empanadas</h2>
         <div class="comercioDiv" *ngFor="let comercio of comerciosDePizzas" >
-            <div>
+            <div *ngIf="isLogged()">
                 <button class="actionButton" (click)="eliminarComercio(comercio)">Eliminar</button>
                 <button class="actionButton" (click)="editarComercio(comercio)">Editar</button>
             </div>
@@ -15,7 +15,7 @@
     <article>
         <h2 class="main-title">Pollos</h2>
         <div class="comercioDiv" *ngFor="let comercio of comerciosDePollos" >
-            <div>
+            <div *ngIf="isLogged()">
                 <button class="actionButton" (click)="eliminarComercio(comercio)">Eliminar</button>
                 <button class="actionButton" (click)="editarComercio(comercio)">Editar</button>
             </div>
@@ -28,7 +28,7 @@
     <article>
         <h2 class="main-title">Heladerías</h2>
         <div class="comercioDiv" *ngFor="let comercio of comerciosDeHeladerias" >
-            <div>
+            <div *ngIf="isLogged()">
                 <button class="actionButton" (click)="eliminarComercio(comercio)">Eliminar</button>
                 <button class="actionButton" (click)="editarComercio(comercio)">Editar</button>
             </div>

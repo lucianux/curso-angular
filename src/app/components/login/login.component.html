@@ -1,1 +1,28 @@
-<a href="#" class="google btn" (click)="ingresar()" href="#"><i class="fa fa-google fa-fw"></i>Login with Google</a>
+<!-- <a href="#" class="google btn" (click)="ingresar()" href="#"><i class="fa fa-google fa-fw"></i>Login with Google</a> -->
+<main>
+    <h2 class="main-title">Ingresar</h2>
+    <form action="">
+        <div class="row">
+            <div class="column-A">
+                <label for="email">Email</label>
+            </div>
+            <div class="column-B">
+                <input id="email" name="email" type="text" [(ngModel)]="usuario.email">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column-A">
+                <label for="password">Password</label>
+            </div>
+            <div class="column-B">
+                <input id="password" name="password" type="password" [(ngModel)]="usuario.password">
+            </div>
+        </div>
+
+        <div>
+            <!-- <input type="submit"> -->
+            <button type="button" (click)="ingresarConEmail()">Ingresar</button>
+        </div>
+    </form>
+</main>

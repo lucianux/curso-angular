@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'registro',
@@ -7,5 +8,16 @@ import { Component } from '@angular/core';
 })
 
 export class RegistroComponent {
+    usuarioNuevo = {
+        email: '',
+        password: ''
+    }
 
+    constructor(private _authS: AuthService) {
+
+    }
+
+    public crearUsuario() {
+        this._authS.registrarConEmail(this.usuarioNuevo.email, this.usuarioNuevo.password);
+    }
 }

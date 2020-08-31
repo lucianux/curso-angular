@@ -8,6 +8,7 @@ import { ComerciosComponent } from './components/comercios/comercios.component';
 import { AgregacionComponent } from './components/agregacion/agregacion.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { LoginComponent } from './components/login/login.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 // Rutas
 const appRoutes: Routes = [
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
     { path: "registro", component: RegistroComponent },
     { path: "comercios", component: ComerciosComponent },
     { path: "agregar", component: AgregacionComponent },
+    { path: "usuario", component: UsuarioComponent },
     { path: "entrar", component: LoginComponent },
     // Cualquier otra ruta
     { path: "**", component: ComerciosComponent }

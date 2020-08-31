@@ -16,7 +16,7 @@
                 <label for="email">Email</label>
             </div>
             <div class="column-B">
-                <input id="email" name="email" type="email">
+                <input id="email" name="email" type="email" [(ngModel)]="usuarioNuevo.email">
             </div>
         </div>
 
@@ -25,12 +25,12 @@
                 <label for="password">Password</label>
             </div>
             <div class="column-B">
-                <input id="password" name="password" type="password">
+                <input id="password" name="password" type="password" [(ngModel)]="usuarioNuevo.password">
             </div>
         </div>
 
         <div>
-            <input type="submit">
+            <button type="button" (click)="crearUsuario()">Registrarse</button>
         </div>
     </form>
 </main>

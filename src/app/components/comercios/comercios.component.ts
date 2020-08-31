@@ -40,7 +40,11 @@ export class ComerciosComponent implements OnInit {
 
     public editarComercio(comercio: Comercio) {
         console.log("Editando " + comercio);
-        
+    }
+
+    public isLogged(): boolean {
+        const user = JSON.parse(localStorage.getItem('user'));
+        return user !== null;
     }
 
     ngOnInit() {

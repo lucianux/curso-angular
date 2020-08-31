@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class NavbarComponent {
-    public isLogged: boolean = false;
 
     constructor() { }
+
+    public isLogged(): boolean {
+        const user = JSON.parse(localStorage.getItem('user'));
+        return user !== null;
+    }
 
     ngOnInit() { }
 }

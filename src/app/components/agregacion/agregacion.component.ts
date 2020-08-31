@@ -11,7 +11,6 @@ import { ResponseAlta } from '../../model/responseAlta';
 })
 
 export class AgregacionComponent {
-    //comercioFormulario: Comercio;
     comercioFormulario: any = {
         nombre: '',
         direccion: '',
