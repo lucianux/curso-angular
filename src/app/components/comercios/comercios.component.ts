@@ -27,10 +27,15 @@ export class ComerciosComponent implements OnInit {
                 this.comerciosDePollos = data.filter(i => i.tipo === 'pollos');
                 this.comerciosDePizzas = data.filter(i => i.tipo === 'pizzas');
                 this.comerciosDeHeladerias = data.filter(i => i.tipo === 'heladerias');
-                //console.log(this.data);
+                console.log(data);
             },
             err => console.log(err)
         );
+    }
+
+    public eliminarComercio(comercio: Comercio) {
+        console.log(comercio);
+        this._comercioService.eliminarComercio(comercio);
     }
 
     ngOnInit() {

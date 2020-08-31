@@ -1,13 +1,13 @@
 export interface Comercio {
 
-    uid: number;
+    id: number;
 
     nombre: string;
 
     direccion: string;
 
     telefono: string;
-    
+
     tipo: string;
 
 }

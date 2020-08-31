@@ -27,5 +27,9 @@
 }
 
 .comercioDiv {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.actionButton {
+    width: 10em;
 }
