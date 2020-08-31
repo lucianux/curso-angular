@@ -10,22 +10,20 @@ import { renderFlagCheckIfStmt } from '@angular/compiler/src/render3/view/templa
 
 @Injectable()
 export class ComercioService {
-    baseUrl = 'http://localhost:3001'
     private coleccionDeComercios: AngularFirestoreCollection<Comercio>;
     comercios: Observable<Comercio[]>;
 
-    constructor(private _http: HttpClient, private afs: AngularFirestore) {
+    constructor(private afs: AngularFirestore) {
         this.coleccionDeComercios = afs.collection<Comercio>('comercios');
         this.comercios = this.coleccionDeComercios.valueChanges();
     }
 
     public obtenerComercios(): Observable<Comercio[]> {
-        //var comercios: Comercio[] = this.afs.firestore.collection('comercios');
         return this.comercios;
     }
 
     public publicarComercio(comercio: Comercio) {
-        return this._http.post(this.baseUrl + '/alta', comercio);
+        this.coleccionDeComercios.add(comercio);
     }
 
     public eliminarComercio(id: number) {

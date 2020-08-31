@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,18 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   response: Observable<any[]>;
-  // comercios: Array<any>;
 
   constructor() {
-    // this.comercios = Array<any>();
-    // this.response = firestore.collection('comercios').valueChanges();
-
-    // this.response.subscribe(
-    //   data => {
-    //     var datos: Array<any> = <Array<any>> data;
-    //     this.comercios = datos;
-    //     console.log("dato: " + datos[0].nombre);
-    //   }
-    // )
   }
 }

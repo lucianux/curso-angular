@@ -11,22 +11,20 @@ import { ResponseAlta } from '../../model/responseAlta';
 })
 
 export class AgregacionComponent {
-    comercioFormulario: Comercio;
+    //comercioFormulario: Comercio;
+    comercioFormulario: any = {
+        nombre: '',
+        direccion: '',
+        telefono: '',
+        tipo: ''
+    }
 
     constructor(private _comercioService: ComercioService) {
-        this.comercioFormulario = new Comercio();
-        //this.comercioFormulario.title = "";
     }
 
     publicarComercio () {
         console.log("Send " + this.comercioFormulario.tipo);
         var response: string = "";
-        this._comercioService.publicarComercio(this.comercioFormulario).subscribe(
-            data => {
-                var respuesta: ResponseAlta = <ResponseAlta> data;
-                response = respuesta.response;
-                console.log("Respuesta " + response);
-            }
-        );
+        this._comercioService.publicarComercio(this.comercioFormulario);
     }
 }
