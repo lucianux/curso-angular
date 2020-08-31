@@ -2,7 +2,10 @@
     <article>
         <h2 class="main-title">Pizzas Y Empanadas</h2>
         <div class="comercioDiv" *ngFor="let comercio of comerciosDePizzas" >
-            <div><button class="actionButton" (click)="eliminarComercio(comercio)">Eliminar</button></div>
+            <div>
+                <button class="actionButton" (click)="eliminarComercio(comercio)">Eliminar</button>
+                <button class="actionButton" (click)="editarComercio(comercio)">Editar</button>
+            </div>
             <div><span class="icono"><i class="fas fa-store"></i></span>{{comercio.nombre}}</div>
             <div><span class="icono"><i class="fas fa-map-marker-alt"></i></span>{{comercio.direccion}}</div>
             <div><span class="icono"><i class="fas fa-phone"></i></span>{{comercio.telefono}}</div>
@@ -12,7 +15,10 @@
     <article>
         <h2 class="main-title">Pollos</h2>
         <div class="comercioDiv" *ngFor="let comercio of comerciosDePollos" >
-            <div><button class="actionButton" (click)="eliminarComercio(comercio)">Eliminar</button></div>
+            <div>
+                <button class="actionButton" (click)="eliminarComercio(comercio)">Eliminar</button>
+                <button class="actionButton" (click)="editarComercio(comercio)">Editar</button>
+            </div>
             <div><span class="icono"><i class="fas fa-store"></i></span>{{comercio.nombre}}</div>
             <div><span class="icono"><i class="fas fa-map-marker-alt"></i></span>{{comercio.direccion}}</div>
             <div><span class="icono"><i class="fas fa-phone"></i></span>{{comercio.telefono}}</div>
@@ -22,7 +28,10 @@
     <article>
         <h2 class="main-title">Heladerías</h2>
         <div class="comercioDiv" *ngFor="let comercio of comerciosDeHeladerias" >
-            <div><button class="actionButton" (click)="eliminarComercio(comercio)">Eliminar</button></div>
+            <div>
+                <button class="actionButton" (click)="eliminarComercio(comercio)">Eliminar</button>
+                <button class="actionButton" (click)="editarComercio(comercio)">Editar</button>
+            </div>
             <div><span class="icono"><i class="fas fa-store"></i></span>{{comercio.nombre}}</div>
             <div><span class="icono"><i class="fas fa-map-marker-alt"></i></span>{{comercio.direccion}}</div>
             <div><span class="icono"><i class="fas fa-phone"></i></span>{{comercio.telefono}}</div>

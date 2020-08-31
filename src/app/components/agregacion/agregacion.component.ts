@@ -23,7 +23,7 @@ export class AgregacionComponent {
     }
 
     publicarComercio () {
-        console.log("Send " + this.comercioFormulario.tipo);
+        //console.log("Agregando: " + this.comercioFormulario.tipo);
         var response: string = "";
         this._comercioService.publicarComercio(this.comercioFormulario);
     }
