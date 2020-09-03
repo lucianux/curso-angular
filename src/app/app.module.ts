@@ -17,6 +17,7 @@ import { ComerciosComponent } from './components/comercios/comercios.component';
 import { AgregacionComponent } from './components/agregacion/agregacion.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { EdicionComponent } from './components/edicion/edicion.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
     AcercadeComponent,
     NavbarComponent,
     LoginComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    EdicionComponent
   ],
   imports: [
     BrowserModule,

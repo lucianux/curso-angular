@@ -38,8 +38,10 @@ export class ComerciosComponent implements OnInit {
         this._comercioService.eliminarComercio(comercio);
     }
 
-    public editarComercio(comercio: Comercio) {
-        console.log("Editando " + comercio);
+    public editarComercio(comercioActualizado: Comercio) {
+        console.log("Editando " + comercioActualizado);
+        alert("editar comercio");
+        //this._comercioService.actualizarComercio(comercioActualizado);
     }
 
     public isLogged(): boolean {

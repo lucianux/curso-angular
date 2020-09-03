@@ -1,6 +1,6 @@
-export interface Comercio {
+export class Comercio {
 
-    id: number;
+    id: string;
 
     nombre: string;
 
@@ -9,5 +9,7 @@ export interface Comercio {
     telefono: string;
 
     tipo: string;
+
+    constructor() {}
 
 }
