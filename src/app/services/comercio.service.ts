@@ -81,17 +81,6 @@ export class ComercioService {
         var com: any;
         com = comercioDoc.valueChanges();
         return com;
-        
-        com.subscribe((value: Comercio) => {
-            this.comercio = new Comercio();
-            this.comercio = value;
-            this.comercio.id = uid;
-            //Object.assign(this.comercio, value);
-            //Object.keys(value).forEach(key=>this.comercio[key]=value[key]);
-
-            console.log("ComercioDoc ", this.comercio);
-        });
-        return this.comercio;
     }
 
     public eliminarComercio(comercio: Comercio) {
