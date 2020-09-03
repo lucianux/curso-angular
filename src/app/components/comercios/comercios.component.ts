@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 import { ComercioService } from '../../services/comercio.service';
 import { Comercio } from '../../model/comercio';
 import { Observable } from 'rxjs';
@@ -17,7 +18,7 @@ export class ComerciosComponent implements OnInit {
     comerciosDePizzas: Array<Comercio>;
     comerciosDeHeladerias: Array<Comercio>;
 
-    constructor(private _comercioService: ComercioService) {
+    constructor(private _comercioService: ComercioService, private router: Router) {
         this.comerciosDeHeladerias = new Array<Comercio>();
         this.comerciosDePizzas = new Array<Comercio>();
         this.comerciosDePollos = new Array<Comercio>();
@@ -40,8 +41,7 @@ export class ComerciosComponent implements OnInit {
 
     public editarComercio(comercioActualizado: Comercio) {
         console.log("Editando " + comercioActualizado);
-        alert("editar comercio");
-        //this._comercioService.actualizarComercio(comercioActualizado);
+        this.router.navigate(['./editar', comercioActualizado.id]);
     }
 
     public isLogged(): boolean {
