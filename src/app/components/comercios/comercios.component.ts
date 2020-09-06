@@ -4,6 +4,7 @@ import { ComercioService } from '../../services/comercio.service';
 import { Comercio } from '../../model/comercio';
 import { Observable } from 'rxjs';
 import { ResponseComercios } from '../../model/responseComercios';
+import { NotificationService } from '../../utility/notification.service';
 
 @Component({
     selector: 'comercios',
@@ -18,7 +19,11 @@ export class ComerciosComponent implements OnInit {
     comerciosDePizzas: Array<Comercio>;
     comerciosDeHeladerias: Array<Comercio>;
 
-    constructor(private _comercioService: ComercioService, private router: Router) {
+    constructor(
+        private _comercioService: ComercioService,
+        private router: Router,
+        private notiService: NotificationService)
+    {
         this.comerciosDeHeladerias = new Array<Comercio>();
         this.comerciosDePizzas = new Array<Comercio>();
         this.comerciosDePollos = new Array<Comercio>();
@@ -37,6 +42,7 @@ export class ComerciosComponent implements OnInit {
     public eliminarComercio(comercioAeliminar: Comercio) {
         //console.log("Eliminando " + comercio);
         this._comercioService.eliminarComercio(comercioAeliminar);
+        this.notiService.showInfo("Se eliminó el comercio.", "");
     }
 
     public editarComercio(comercioActualizado: Comercio) {

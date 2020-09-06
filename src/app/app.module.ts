@@ -7,6 +7,8 @@ import { AngularFireModule } from '@angular/fire';
 //import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -39,7 +41,9 @@ import { EdicionComponent } from './components/edicion/edicion.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     // AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
