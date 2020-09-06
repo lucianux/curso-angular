@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { ComercioService } from '../../services/comercio.service';
 import { Comercio } from '../../model/comercio';
 import { Observable } from 'rxjs';
@@ -34,13 +34,13 @@ export class ComerciosComponent implements OnInit {
         );
     }
 
-    public eliminarComercio(comercio: Comercio) {
+    public eliminarComercio(comercioAeliminar: Comercio) {
         //console.log("Eliminando " + comercio);
-        this._comercioService.eliminarComercio(comercio);
+        this._comercioService.eliminarComercio(comercioAeliminar);
     }
 
     public editarComercio(comercioActualizado: Comercio) {
-        console.log("Editando " + comercioActualizado);
+        //console.log("Editando " + comercioActualizado);
         this.router.navigate(['./editar', comercioActualizado.id]);
     }
 
@@ -50,6 +50,5 @@ export class ComerciosComponent implements OnInit {
     }
 
     ngOnInit() {
-        
     }
 }

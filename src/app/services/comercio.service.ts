@@ -74,13 +74,10 @@ export class ComercioService {
     //     }
     // }
 
-    public obtenerComercio3(uid: string): any {
-        var outcome: Comercio = new Comercio();
+    public obtenerComercio3(uid: string): Observable<firebase.firestore.DocumentData> {
         var comercioDoc: AngularFirestoreDocument;
         comercioDoc = this.afs.doc<Comercio>(`comercios/${uid}`);
-        var com: any;
-        com = comercioDoc.valueChanges();
-        return com;
+        return comercioDoc.valueChanges();
     }
 
     public eliminarComercio(comercio: Comercio) {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ComercioService } from '../../services/comercio.service';
 import { Comercio } from 'src/app/model/comercio';
 import { Observable, Observer } from 'rxjs';
@@ -13,35 +13,35 @@ import { Observable, Observer } from 'rxjs';
 
 export class EdicionComponent implements OnInit {
 
-    uid: string = '';
     comercioEditable: Comercio;
-    comObs: any;
     comercioLoaded: Promise<boolean>;
 
-    time = new Observable<string>((observer: Observer<string>) => {
-        setInterval(() => observer.next(new Date().toString()), 2000);
-    });
-
-    constructor(private rutaActiva: ActivatedRoute, private comercioS: ComercioService) { }
+    constructor(
+        private rutaActiva: ActivatedRoute,
+        private comercioS: ComercioService,
+        private router: Router) { }
     
     ngOnInit() {
-        
-        this.uid = this.rutaActiva.snapshot.params.uid;
-        //console.log(this.uid);
+        var uid:string = this.rutaActiva.snapshot.params.uid;
+
         //this.comercioEditable = this.comercioS.obtenerComercio(this.uid);
         //this.comercioEditable = this.comercioS.obtenerComercio2(this.uid);
-        this.comObs = this.comercioS.obtenerComercio3(this.uid);
-        this.comObs.subscribe(
+        this.comercioS.obtenerComercio3(uid).subscribe(
             (value: Comercio) => {
                 this.comercioEditable = new Comercio();
                 this.comercioEditable = value;
-                this.comercioEditable.id = this.uid;
-                console.log("ComercioDoc ", this.comercioEditable);
+                this.comercioEditable.id = uid;
+                // console.log("Comercio a editar ", this.comercioEditable);
                 this.comercioLoaded = Promise.resolve(true);
             }
         );
 
         console.log("Comercio edit ", this.comercioEditable);
+    }
+
+    public actualizarComercio(actualizado: Comercio) {
+        this.comercioS.actualizarComercio(actualizado);
+        this.router.navigate(['./comercios']);
     }
 
 }

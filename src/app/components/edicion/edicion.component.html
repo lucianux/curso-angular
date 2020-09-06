@@ -1,8 +1,49 @@
-<h2>Edicion</h2>
-<div *ngIf="comercioLoaded | async">
-    <h2>{{ comercioEditable.nombre }}</h2>
-    <h2>{{ comercioEditable.direccion }}</h2>
-    <h2>{{ comercioEditable.telefono }}</h2>
-    <h2>{{ comercioEditable.tipo }}</h2>
-</div>
-<div><code>observable|async</code>: Time: {{ time | async }}</div>
+<main>
+    <h2 class="main-title">Edicion</h2>
+    <p>Modifique lo que necesite</p>
+    <form action="" *ngIf="comercioLoaded | async">
+        <div class="row">
+            <div class="column-A">
+                <label for="nameCommerce">Nombre</label>
+            </div>
+            <div class="column-B">
+                <input id="nameCommerce" name="nameCommerce" type="text" [(ngModel)]="comercioEditable.nombre">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column-A">
+                <label for="address">Dirección</label>
+            </div>
+            <div class="column-B">
+                <input id="address" name="address" type="text" [(ngModel)]="comercioEditable.direccion">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column-A">
+                <label for="phone">Teléfono</label>
+            </div>
+            <div class="column-B">
+                <input id="phone" name="phone" type="text" [(ngModel)]="comercioEditable.telefono">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column-A">
+                <label for="category">Categoría</label>
+            </div>
+            <div class="column-B">
+                <select name="category" id="category" [(ngModel)]="comercioEditable.tipo">
+                    <option value="pizzas">Pizzas y Empanadas</option>
+                    <option value="heladerias">Heladerías</option>
+                    <option value="pollos">Pollos</option>
+                </select>
+            </div>
+        </div>
+
+        <div>
+            <button type="button" (click)="actualizarComercio(comercioEditable)">Actualizar comercio</button>
+        </div>
+    </form>
+</main>

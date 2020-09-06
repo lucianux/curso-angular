@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Comercio } from 'src/app/model/comercio';
 import { ComercioService } from '../../services/comercio.service';
 import { ResponseAlta } from '../../model/responseAlta';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'agregacion',
@@ -18,12 +19,14 @@ export class AgregacionComponent {
         tipo: ''
     }
 
-    constructor(private _comercioService: ComercioService) {
-    }
+    constructor(
+        private _comercioService: ComercioService,
+        private router: Router) {  }
 
     publicarComercio () {
         //console.log("Agregando: " + this.comercioFormulario.tipo);
         var response: string = "";
         this._comercioService.publicarComercio(this.comercioFormulario);
+        this.router.navigate(['./comercios']);
     }
 }
